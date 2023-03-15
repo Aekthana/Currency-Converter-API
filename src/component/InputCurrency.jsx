@@ -7,9 +7,11 @@ export default function InputCurrency(props) {
   function handleInputChange(event) {
     props.onInputCurrent(event.target.value);
   }
-
+  function handleSubmit(event){
+    event.preventDefault();
+  }
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <select name="" id="" onChange={handleChang}>
         {/* <option value={props.value}>{props.value}</option> */}
         {props.symbols ? (
